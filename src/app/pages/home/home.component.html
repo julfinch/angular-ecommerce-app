@@ -1,5 +1,7 @@
 <mat-drawer-container [autosize]="true" class="min-h-full max-w-7xl mx-auto border-x">
     <mat-drawer mode="side" opened class="p-6">
+        <!-- The onShowCategory() method in the HomeComponent is called when the showCategory event is emitted.  -->
+        <!-- The onShowCategory() method takes a parameter, $event, which contains the new category that was selected. -->
         <app-filters (showCategory)="onShowCategory($event)"></app-filters>
     </mat-drawer>
     <mat-drawer-content class="p-6">
