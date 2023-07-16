@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+const ROWS_HEIGHT: { [id:number]: number } = { 1: 400, 3: 335, 4: 350};
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   // Create the variable "cols" that will hold the default columns which is 3
   cols = 3;
+  rowHeight = ROWS_HEIGHT[this.cols];
   category: string | undefined;
 
   constructor() {}
@@ -16,6 +18,7 @@ export class HomeComponent implements OnInit {
 
   onColumnsCountChange(colsNum: number): void {
     this.cols = colsNum;
+    this.rowHeight = ROWS_HEIGHT[this.cols];
   }
 
   // The onShowCategory() method sets the category property to the new category. 

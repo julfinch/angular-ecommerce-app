@@ -31,17 +31,17 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ### Folder Structure
 
     📁app
-        └📁pages
-            └📁home
-                └📁components
-                    └📁filters
-                        └📄filters.component.html
-                        └📄filters.component.ts
-                    └📁products-header
-                        └📄products-header.component.html
-                        └📄products-header.component.ts
-                    └📄home.component.html
-                    └📄home.component.ts
+        └─📁pages
+            └─📁home
+                └─📁components
+                    ├─📁filters
+                    │    ├─📄filters.component.html
+                    │    └─📄filters.component.ts
+                    ├─📁products-header
+                    │    ├─📄products-header.component.html
+                    │    └─📄products-header.component.ts
+                    ├─📄home.component.html
+                    └─📄home.component.ts
 
 ### THE DETAILS OF EACH STEP PROCESS:
 1. When the user clicks a category in the `FiltersComponent`, the `FiltersComponent` emits an event with the new category. The event is called `showCategory` and it takes a string as its parameter. The string parameter is the new category that was selected.
