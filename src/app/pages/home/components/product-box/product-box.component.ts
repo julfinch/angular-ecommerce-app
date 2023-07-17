@@ -7,14 +7,7 @@ import { Product } from 'src/app/models/product.models';
 })
 export class ProductBoxComponent {
   @Input() fullWidthMode = false;
-  product: Product | undefined = {
-    id: 1,
-    title: 'Snickers',
-    price: 150,
-    category: 'shoes',
-    description: 'Description',
-    image: 'https://via.placeholder.com/150',
-  }
+  @Input() product: Product | undefined
   // Emit the product to the shopping cart if a product is clicked
   @Output() addToCart = new EventEmitter();
 
